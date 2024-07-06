@@ -13,6 +13,10 @@ opt.compatible = false
 if fn.has('termguicolors') then
   opt.termguicolors = true
 end
+-- colorscheme
+
+vim.cmd('colorscheme nightfox')
+
 
 -- See :h <option> to see what the options do
 
