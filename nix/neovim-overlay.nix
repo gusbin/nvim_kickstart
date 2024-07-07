@@ -83,6 +83,8 @@ with final.pkgs.lib; let
     which-key-nvim
     # color-scheme
     nightfox-nvim
+    # terminal
+    toggleterm-nvim
   ];
 
   extraPackages = with pkgs; [
