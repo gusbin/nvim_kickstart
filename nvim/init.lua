@@ -19,7 +19,8 @@ vim.cmd('colorscheme nightfox')
 -- Gusbin specific keybinds and settings
 vim.keymap.set("i", "jk", "<Esc>", {noremap = true})
 -- Map Ctrl-S to save and exit insert mode
-vim.keymap.set("i", "<C-s>", "<Esc>:w<CR>a", { noremap = true })
+vim.keymap.set("i", "<C-s>", "<Esc>:w<CR>", { noremap = true })
+vim.keymap.set("n", "<C-s>", ":w<CR>", { noremap = true })
 
 -- See :h <option> to see what the options do
 
