@@ -87,7 +87,7 @@ with final.pkgs.lib; let
     # terminal
     toggleterm-nvim
     mini-nvim
-    rainbow-delimiters-nvim
+    # rainbow-delimiters-nvim
   ];
 
   extraPackages = with pkgs; [
