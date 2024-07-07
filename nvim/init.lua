@@ -16,7 +16,10 @@ end
 -- colorscheme
 
 vim.cmd('colorscheme nightfox')
-
+-- Gusbin specific keybinds and settings
+vim.keymap.set("i", "jk", "<Esc>", {noremap = true})
+-- Map Ctrl-S to save and exit insert mode
+vim.keymap.set("i", "<C-s>", "<Esc>:w<CR>a", { noremap = true })
 
 -- See :h <option> to see what the options do
 
@@ -31,7 +34,7 @@ opt.showmatch = true -- Highlight matching parentheses, etc
 opt.incsearch = true
 opt.hlsearch = true
 
-opt.spell = true
+opt.spell = false
 opt.spelllang = 'en'
 
 opt.expandtab = true
