@@ -88,6 +88,7 @@ with final.pkgs.lib; let
     toggleterm-nvim
     mini-nvim
     # rainbow-delimiters-nvim
+    trouble-nvim
   ];
 
   extraPackages = with pkgs; [
