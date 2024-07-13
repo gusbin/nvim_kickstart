@@ -3,7 +3,7 @@ if vim.g.did_load_trouble_plugin then
 end
 vim.g.did_load_trouble_plugin = true
 ----------------[trouble - plugin]-------------
-require("trouble.config").setup({
+require('trouble.config').setup({
   modes = {
     preview_float = {
       mode = "diagnostics",
@@ -20,3 +20,10 @@ require("trouble.config").setup({
     },
   },
 })
+-- auto open quickfix window
+vim.api.nvim_create_autocmd("QuickFixCmdPost", {
+  callback = function()
+    vim.cmd([[Trouble qflist open]])
+  end,
+})
+

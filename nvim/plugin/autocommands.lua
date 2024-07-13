@@ -90,8 +90,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
     keymap.set('n', '<space>wq', vim.lsp.buf.workspace_symbol, desc('lsp [w]orkspace symbol [q]'))
     keymap.set('n', '<space>dd', vim.lsp.buf.document_symbol, desc('lsp [dd]ocument symbol'))
     keymap.set('n', '<M-CR>', vim.lsp.buf.code_action, desc('[lsp] code action'))
-    keymap.set('n', '<M-l>', vim.lsp.codelens.run, desc('[lsp] run code lens'))
-    keymap.set('n', '<space>cr', vim.lsp.codelens.refresh, desc('lsp [c]ode lenses [r]efresh'))
+    -- keymap.set('n', '<M-l>', vim.lsp.codelens.run, desc('[lsp] run code lens'))
+    -- keymap.set('n', '<space>cr', vim.lsp.codelens.refresh, desc('lsp [c]ode lenses [r]efresh'))
     keymap.set('n', 'gr', vim.lsp.buf.references, desc('lsp [g]et [r]eferences'))
     keymap.set('n', '<space>f', function()
       vim.lsp.buf.format { async = true }
@@ -107,23 +107,23 @@ vim.api.nvim_create_autocmd('LspAttach', {
     if not client then
       return
     end
-    local function buf_refresh_codeLens()
-      vim.schedule(function()
-        if client.server_capabilities.codeLensProvider then
-          vim.lsp.codelens.refresh()
-          return
-        end
-      end)
-    end
-    local group = api.nvim_create_augroup(string.format('lsp-%s-%s', bufnr, client.id), {})
-    if client.server_capabilities.codeLensProvider then
-      vim.api.nvim_create_autocmd({ 'InsertLeave', 'BufWritePost', 'TextChanged' }, {
-        group = group,
-        callback = buf_refresh_codeLens,
-        buffer = bufnr,
-      })
-      buf_refresh_codeLens()
-    end
+    -- local function buf_refresh_codeLens()
+    --   vim.schedule(function()
+    --     if client.server_capabilities.codeLensProvider then
+    --       vim.lsp.codelens.refresh()
+    --       return
+    --     end
+    --   end)
+    -- end
+    -- local group = api.nvim_create_augroup(string.format('lsp-%s-%s', bufnr, client.id), {})
+    -- if client.server_capabilities.codeLensProvider then
+    --   vim.api.nvim_create_autocmd({ 'InsertLeave', 'BufWritePost', 'TextChanged' }, {
+    --     group = group,
+    --     callback = buf_refresh_codeLens,
+    --     buffer = bufnr,
+    --   })
+    --   buf_refresh_codeLens()
+    -- end
   end,
 })
 
