@@ -12,10 +12,10 @@
     #   url = "github:Cassin01/wf.nvim";
     #   flake = false;
     # };
-    zig-comp-diag = {
-        url = "github:speed2exe/zig-comp-diag.nvim";
-        flake = false;
-      };
+    # zig-comp-diag = {
+    #     url = "github:speed2exe/zig-comp-diag.nvim";
+    #     flake = false;
+    #   };
   };
 
   outputs = inputs @ {
