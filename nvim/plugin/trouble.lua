@@ -78,9 +78,9 @@ position = 'bottom', -- position of the list can be: bottom, top, left, right
 --   use_quickfix = true,
 -- })
 -- auto open quickfix window
--- vim.api.nvim_create_autocmd("QuickFixCmdPost", {
---   callback = function()
---     vim.cmd([[Trouble qflist open]])
---   end,
--- })
+vim.api.nvim_create_autocmd("QuickFixCmdPost", {
+  callback = function()
+    vim.cmd([[Trouble quickfix]])
+  end,
+})
 
