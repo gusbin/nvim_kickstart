@@ -17,7 +17,7 @@ require('bqf').setup({
         win_height = 12,
         win_vheight = 12,
         delay_syntax = 80,
-        border = {'┏', '━', '┓', '┃', '┛', '━', '┗', '┃'},
+        -- border = {'┏', '━', '┓', '┃', '┛', '━', '┗', '┃'},
         show_title = false,
         should_preview_cb = function(bufnr, qwinid)
             local ret = true

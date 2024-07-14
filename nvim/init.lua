@@ -13,8 +13,18 @@ opt.compatible = false
 if fn.has('termguicolors') then
   opt.termguicolors = true
 end
+-- Toggle quickfix
+function Toggle_qflist()
+  for _, win in ipairs(vim.fn.getwininfo()) do
+    if win.quickfix == 1 then
+      vim.cmd("cclose")
+      return
+    end
+  end
+  vim.cmd("copen")
+end
+vim.keymap.set("n", "<leader>q", "<cmd>lua Toggle_qflist()<CR>", { noremap = true, silent = true })
 -- colorscheme
-
 vim.cmd('colorscheme nightfox')
 -- Gusbin specific keybinds and settings
 vim.keymap.set("i", "jk", "<Esc>", {noremap = true})
