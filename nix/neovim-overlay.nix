@@ -91,9 +91,12 @@ with final.pkgs.lib; let
     mini-nvim
     # rainbow-delimiters-nvim
     # trouble-nvim
-nvim-bqf
+    nvim-bqf
     # oil
     oil-nvim
+    # neotree
+    neo-tree-nvim
+    nui-nvim
   ];
 
   extraPackages = with pkgs; [

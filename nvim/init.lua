@@ -8,7 +8,8 @@ g.mapleader = ' '
 g.maplocalleader = ' '
 
 opt.compatible = false
-
+-- clipboard
+vim.opt.clipboard = "unnamedplus"
 -- Enable true colour support
 if fn.has('termguicolors') then
   opt.termguicolors = true
