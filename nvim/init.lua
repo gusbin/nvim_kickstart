@@ -6,7 +6,8 @@ local g = vim.g
 -- <leader> key. Defaults to `\`. Some people prefer space.
 g.mapleader = ' '
 g.maplocalleader = ' '
-
+--- set scroll window
+vim.opt.scrolloff = 10
 opt.compatible = false
 -- clipboard
 vim.opt.clipboard = "unnamedplus"

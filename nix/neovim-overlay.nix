@@ -89,11 +89,9 @@ with final.pkgs.lib; let
     # terminal
     toggleterm-nvim
     mini-nvim
-    # rainbow-delimiters-nvim
-    # trouble-nvim
     nvim-bqf
     # oil
-    oil-nvim
+    # oil-nvim
     # neotree
     neo-tree-nvim
     nui-nvim
