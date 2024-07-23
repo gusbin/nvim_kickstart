@@ -20,5 +20,5 @@ require('mini.basics').setup({
 require('mini.pairs').setup()
 require('mini.cursorword').setup()
 require('mini.comment').setup()
-require('mini.animate').setup()
+-- require('mini.animate').setup()
 -------------more changes-----------
