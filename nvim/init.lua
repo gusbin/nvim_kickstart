@@ -28,7 +28,7 @@ end
 vim.keymap.set("n", "<leader>q", "<cmd>lua Toggle_qflist()<CR>", { noremap = true, silent = true })
 -- colorscheme
 -- vim.cmd('colorscheme nightfox')
-vim.cmd('colorscheme Default')
+vim.cmd('colorscheme default')
 -- Gusbin specific keybinds and settings
 vim.keymap.set("i", "jk", "<Esc>", {noremap = true})
 -- Map Ctrl-S to save and exit insert mode
